@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="7zP-oz-dR0" customClass="MusicInfoTableViewCell" customModule="MusicList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7zP-oz-dR0" id="rlP-8B-1Lh">
+                <rect key="frame" x="0.0" y="0.0" width="401" height="113.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE4-wb-z2r">
+                        <rect key="frame" x="11" y="6" width="114" height="101.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-IT-p4v">
+                        <rect key="frame" x="133" y="36.5" width="220" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClN-k7-sAs">
+                        <rect key="frame" x="133" y="71" width="220" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="L0S-YH-vCG"/>
+                            <constraint firstAttribute="width" constant="220" id="jc1-Kp-OxT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ClN-k7-sAs" firstAttribute="top" secondItem="grQ-IT-p4v" secondAttribute="bottom" constant="14" id="3W2-gV-8JI"/>
+                    <constraint firstItem="grQ-IT-p4v" firstAttribute="leading" secondItem="hE4-wb-z2r" secondAttribute="trailing" constant="8" id="3mn-zz-vgi"/>
+                    <constraint firstItem="ClN-k7-sAs" firstAttribute="leading" secondItem="hE4-wb-z2r" secondAttribute="trailing" constant="8" id="58r-J9-h5A"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ClN-k7-sAs" secondAttribute="bottom" constant="11" id="8Y1-Tk-m5x"/>
+                    <constraint firstItem="ClN-k7-sAs" firstAttribute="trailing" secondItem="grQ-IT-p4v" secondAttribute="trailing" id="8a9-XY-JI9"/>
+                    <constraint firstItem="hE4-wb-z2r" firstAttribute="leading" secondItem="rlP-8B-1Lh" secondAttribute="leading" constant="11" id="Mhc-vs-S1a"/>
+                    <constraint firstItem="hE4-wb-z2r" firstAttribute="top" secondItem="rlP-8B-1Lh" secondAttribute="topMargin" constant="-5" id="cyS-QQ-ysC"/>
+                    <constraint firstItem="hE4-wb-z2r" firstAttribute="centerY" secondItem="rlP-8B-1Lh" secondAttribute="centerY" id="dAX-fc-qz4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ClN-k7-sAs" secondAttribute="trailing" constant="28" id="nzj-zD-GiU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistName" destination="grQ-IT-p4v" id="nK0-ER-KFj"/>
+                <outlet property="songImageView" destination="hE4-wb-z2r" id="iT7-Q8-pRZ"/>
+                <outlet property="songName" destination="ClN-k7-sAs" id="lwq-hk-yVB"/>
+            </connections>
+            <point key="canvasLocation" x="176.80000000000001" y="127.736131934033"/>
+        </tableViewCell>
+    </objects>
+</document>

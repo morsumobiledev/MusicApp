@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MusicListViewController" customModule="MusicList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="txO-N3-EtS">
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="w5L-YQ-EVX"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="j2O-59-7RL"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple New Music Releases for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z62-hL-GL0">
+                                <rect key="frame" x="72" y="46" width="231.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="txO-N3-EtS" firstAttribute="top" secondItem="z62-hL-GL0" secondAttribute="bottom" constant="8" id="3NK-Wg-9IK"/>
+                            <constraint firstItem="txO-N3-EtS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4dO-DK-bIY"/>
+                            <constraint firstItem="z62-hL-GL0" firstAttribute="centerX" secondItem="txO-N3-EtS" secondAttribute="centerX" id="Du0-da-qrl"/>
+                            <constraint firstItem="txO-N3-EtS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="GgI-OJ-W6V"/>
+                            <constraint firstItem="z62-hL-GL0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="L7c-Xm-PpJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="txO-N3-EtS" secondAttribute="bottom" id="R1B-or-DBS"/>
+                            <constraint firstAttribute="trailing" secondItem="txO-N3-EtS" secondAttribute="trailing" id="YuI-LQ-dGB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="musicListHeader" destination="z62-hL-GL0" id="K6x-0P-sMR"/>
+                        <outlet property="musicListTableView" destination="txO-N3-EtS" id="6MT-OR-ycE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
